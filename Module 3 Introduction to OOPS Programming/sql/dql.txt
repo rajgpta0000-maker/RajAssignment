@@ -1,0 +1,124 @@
+DQL = DATA QUEARY LANGUAGE
+
+select 
+
+SELECT * FROM student;
+
+SELECT * FROM student WHERE studentId=2;
+
+SELECT studentName,email FROM student;
+
+
+Alias:=>
+SELECT studentName as studentName,email as email FROM student;
+
+order by=>
+SELECT * FROM 'student' ORDER BY studentName ASC;
+
+SELECT * FROM 'student' ORDER BY studentName DESC;
+
+SELECT * FROM 'product' WHERE catid=1 AND price > 50000;
+
+SELECT * FROM 'product' WHERE catid=1 OR 
+
+SELECT * FROM 'product' WHERE not  catid=1 
+
+SELECT * FROM 'product' LIMIT 0,15;
+
+SELECT * FROM 'product' LIMIT 15,5;
+
+
+SELECT min(price) as MiniumumPrice,productName FROM 'product';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM enroll JOIN student on enroll.sid=student.studentId JOIN courses on enroll.cid=courses.cid;
+
+SELECT * FROM enroll LEFT JOIN courses on enroll.cid=courses.cid;
+
+SELECT * FROM enroll RIGHT JOIN courses on enroll.cid=courses.cid;
+
+SELECT * FROM enroll FULL JOIN courses;
+
+
+CREATE TABLE test (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50),
+    price INT,
+    email VARCHAR(100)
+);
+
+
+INSERT INTO test (name, price, email) VALUES
+('Raj', 2000, 'raj@gmail.com'),
+('Amit', 2200, 'amit@gmail.com'),
+('Neha', 2100, 'neha@gmail.com'),
+('Priya', 2300, 'priya@gmail.com'),
+('Karan', 2400, 'karan@gmail.com');
+
+
+DELIMITER //
+CREATE PROCEDURE productPriceIncre1()
+BEGIN
+	DECLARE id int;
+    DECLARE newPrice int;
+    DECLARE isDone int DEFAULT 0;
+    
+    DECLARE productCur CURSOR FOR
+    	SELECT id,price FROM test;
+        
+      DELIMITER //
+
+CREATE PROCEDURE productPriceIncre1()
+BEGIN
+    DECLARE p_id INT;
+    DECLARE newPrice INT;
+    DECLARE isDone INT DEFAULT 0;
+
+    DECLARE productCur CURSOR FOR
+        SELECT id, price FROM test;
+
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET isDone = 1;
+
+    OPEN productCur;
+
+    readLoop: LOOP
+        FETCH productCur INTO p_id, newPrice;
+
+        IF isDone = 1 THEN
+            LEAVE readLoop;
+        END IF;
+
+        UPDATE test
+        SET price = newPrice + 200
+        WHERE id = p_id;
+
+    END LOOP;
+
+    CLOSE productCur;
+END //
+
+DELIMITER ;
+
+CALL productPriceIncre1();
+
+
+
+
+
+SELECT SUM(fees),cid,ename FROM student JOIN courses ON student.studentId=courses.cid GROUP by cid;
+
+SELECT SUM(fees) AS totalfees,cid,ename FROM student JOIN courses ON student.studentId=courses.cid GROUP by cid HAVING totalfees > 80000;
+

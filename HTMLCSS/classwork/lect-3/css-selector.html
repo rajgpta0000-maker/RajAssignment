@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: lightblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        p{
+            background-color: black;
+            color: white;
+
+        }
+        #first{
+            background-color: brown;
+            color: burlywood;
+        }
+        .second{
+            background-color: blue;
+            color: beige;
+        }
+        .one p{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selector</h1>
+    <h3>universal selector(*)</h3>
+    <code>
+        *{
+            background-color: lightblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </code>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    <h3>element selector</h3>
+    <code>
+        p{
+            background-color: black;
+            color: white;
+
+        }
+    </code>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    <h3>id selector</h3>
+    <p id="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus esse vitae at fuga ducimus quae tenetur assumenda dolorum nulla ipsa velit perspiciatis culpa deserunt alias provident, accusantium similique facere quaerat!
+    </p>
+    <code>
+       #first{
+            background-color: brown;
+            color: burlywood;
+       }
+    </code>
+    <h3>class selector(.)</h3>
+    <p class="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    <code>
+        .second{
+            background-color: blue;
+            color: beige;
+        }
+    </code>
+    <h3>Descendant selector</h3>
+    <div class="one">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    </div>
+    <code>
+        .one p{
+            background-color: red;
+            color: white;
+        }
+    </code>
+
+    
+</body>
+</html>

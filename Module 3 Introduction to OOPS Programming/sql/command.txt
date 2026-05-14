@@ -1,0 +1,23 @@
+DDL: data defination lang :>strcture
+
+database,table,cursor,trigger,view,procedure
+
+create,alter,drop
+
+CREATE DATABASE dec09db;
+
+USE dec09db;
+
+CREATE TABLE student(studentId int PRIMARY KEY AUTO_INCREMENT,studentName varchar(50),email varchar(100),address varchar(255),zipcode varchar(10));
+
+ALTER TABLE student ADD COLUMN contact varchar(20)
+
+ALTER TABLE student CHANGE contact phone int
+
+ALTER TABLE student DROP COLUMN phone
+
+DROP TABLE student
+
+CREATE TABLE courses(cid int PRIMARY KEY AUTO_INCREMENT,ename varchar(50),fees float,duration varchar(20));
+
+CREATE TABLE enroll(enid int PRIMARY KEY AUTO_INCREMENT,sid int ,cid int,FOREIGN KEY(sid) REFERENCES studentId),FOREIGN KEY(cid) REFERENCES courses(cid));

@@ -1,0 +1,34 @@
+DML = DATA MANIPULATION LANGUAGE
+
+1.INSERT,UPDATE,DELETE
+
+INSERT
+
+INSERT INTO student (studentName,email,address,zipcode) VALUES('raj','r@gmail.com','101 navketan park surat','394210');
+INSERT INTO student (studentName,email,address,zipcode) VALUES('yash','y@gmail.com','102 shiv shakti surat','395210');
+INSERT INTO student (studentName,email,address,zipcode) VALUES('raj','r@gmail.com','103 ln park surat','390010');
+INSERT INTO student (studentName,email,address,zipcode) VALUES('raj','r@gmail.com','104 krishna park surat','204210');
+
+
+
+
+
+
+
+INSERT INTO enroll(sid,cid)VALUES(1,1);
+INSERT INTO enroll(sid,cid)VALUES(2,1);
+INSERT INTO enroll(sid,cid)VALUES(3,2);
+INSERT INTO enroll(sid,cid)VALUES(4,3);
+
+UPDATE
+
+UPDATE student SET email='raj@gmail.com' WHERE studentId=1;
+
+DELETE
+
+DELETE FROM student WHERE studentId=4;
+reason => PRIMARY key satha hoye toh DELETE ni tha 
+
+DELETE FROM enroll WHERE sid=2
+
+

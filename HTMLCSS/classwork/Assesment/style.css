@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.main{
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0.7)), url(image/back.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+nav{
+    width: 100%;
+    color: brown;
+    height: 80px;
+    padding: 0px 100px;
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+}
+.logo-div label{
+     font-size: 3em;
+     font-weight: bolder;
+}
+.navbar{
+     display: flex;
+     gap: 20px;
+}
+.navbar a{
+    font-size: 1.5em;
+    text-decoration: none;
+     color: brown;
+     font-weight: bolder;
+     
+}
+.search-div input{
+    padding: 10px;
+    border: 2px solid brown;
+    border-radius: 20px;
+}
+.search-div input::placeholder{
+    color:brown
+}
+.hero-text{
+      color: brown;
+      height: 500px;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+}
+.hero-text h1{
+    font-size: 4em;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px white;
+}
+.hero-text p{
+    font-size: 1em;
+    font-weight: bolder;
+    
+}
+.hero-text button,.btn{
+    padding: 10px 20px;
+    border: 2px solid brown;
+    color: brown;
+    border-radius: 20px;
+    background-color: white;
+}
+.hero-text button:hover,.btn:hover{
+    background-color: brown;
+    color: white;
+}
+
+/* =======================About===================== */
+.about{
+    margin: 50px 0px;
+    padding: 50px 100px;
+}
+.sub-head{
+    font-size: 3em;
+    color: brown;
+    font-weight: bolder;
+    text-align: center;
+}
+.about-row{
+    margin-top: 50px;
+    color: brown;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.about-col h3{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.about-col p{
+    line-height: 2;
+    margin-bottom: 20px;
+    
+}
+.about-col img{
+    height: 100%;
+    width: 100%;
+}
+
+/* =====================Service========================= */
+.service{
+    margin: 50px 0px;
+    padding: 50px 100px;
+   
+}
+.service-row{
+    margin-top: 50px;
+     display: grid;
+     gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+}
+.card{
+    text-align: center;
+    color: brown;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px brown;
+    padding: 20px;
+}
+
+.card-img img{
+     height: 200px;
+     width: 200px;
+     border-radius: 50%;
+     margin: 0px auto;
+     display: block;
+}
+.footer{
+    background: #0B1120;
+    padding-top: 70px;
+}
+
+.footer-container{
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 40px;
+
+    padding-bottom: 50px;
+}
+
+.footer-box h2,
+.footer-box h3{
+    color: #EF4444;
+    margin-bottom: 20px;
+}
+
+.footer-box p{
+    color: #D1D5DB;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+/* ====================== QUICK LINKS ====================== */
+
+.footer-box ul{
+    list-style: none;
+}
+
+.footer-box ul li{
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a{
+    color: #D1D5DB;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-box ul li a:hover{
+    color: #EF4444;
+    padding-left: 8px;
+}
+
+/* ====================== SOCIAL ICONS ====================== */
+
+.social-icons{
+    margin-top: 20px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a{
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #1F2937;
+    color: white;
+
+    border-radius: 10%;
+
+    text-decoration: none;
+    font-size: 1.1rem;
+
+    transition: 0.4s ease;
+}
+
+.social-icons a:hover{
+    background: #EF4444;
+    transform: translateY(-5px);
+}
+
+/* ====================== MAP ====================== */
+
+.footer-box iframe{
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+}
+
+/* ====================== FOOTER BOTTOM ====================== */
+
+.footer-bottom{
+    border-top: 1px solid #1F2937;
+    text-align: center;
+
+    padding: 20px 0px;
+}
+
+.footer-bottom p{
+    color: #9CA3AF;
+    font-size: 0.95rem;
+}
+
+/* ====================== CONTACT FORM ====================== */
+
+.contact-form{
+    background: #1F2937;
+    padding: 40px;
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: 1px solid #374151;
+    border-radius: 12px;
+
+    background: #111827;
+    color: white;
+
+    outline: none;
+    resize: none;
+
+    font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color: #9CA3AF;
+}
+
+.contact-form .btn{
+    width: 100%;
+}
+
+/* ====================== FOOTER CONTACT FORM ====================== */
+
+.footer-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-form input,
+.footer-form textarea{
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border: 1px solid #374151;
+    border-radius: 10px;
+
+    background: #111827;
+    color: white;
+
+    outline: none;
+    resize: none;
+
+    font-size: 1rem;
+
+    transition: 0.3s ease;
+}
+
+.footer-form input:focus,
+.footer-form textarea:focus{
+    border-color: #EF4444;
+}
+
+.footer-form input::placeholder,
+.footer-form textarea::placeholder{
+    color: #9CA3AF;
+}
+
+.footer-form .btn{
+    width: 100%;
+    margin-top: 5px;
+}q
